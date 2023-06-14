@@ -25,15 +25,15 @@ The third subtask consists of predicting on a continuous scale from 1 to 5 to ev
 
 ## Using our baselines
 
-To reproduce the results from the proposed baselines you can rely on the python code provided on this repository. Two main paradigms are explored, i.e., the use of classic machine learning (ML) models and neural models, specifically transformer-based.
+To reproduce the results from the proposed baselines you can rely on the python code provided in this repository. Two main paradigms are explored, i.e., the use of classic machine learning (ML) models and neural models, specifically transformer-based.
 You can use the following command line instruction to train the baselines:
 
 ```shell
 python Baseline.py -mode $PARADIGM -model $MODEL -task $TASK -tf TRAINING_DATA -vf DEV_DATA -phase train 
 ```
-Here PARADIGM variable is used to specify wheter to train a transformer-based system or a classic ML approach, MODEL is used in the case you were using transformers models to specify a pretrained model from hugging face 🤗 library
-TASK is used to specify the task you will be training your system.
-To obtain more information and the choices for each variable you can do 
+Here PARADIGM variable is used to specify wheter to train a transformer-based system or a classic ML approach, MODEL is used in the case you were using transformers models to specify a pretrained model from hugging face 🤗 library, TASK is used to specify the task you will be training your system.
+
+To obtain more information and see the choices for each variable you can do 
 ```shell
 python Baseline.py --help
 ```
