@@ -97,8 +97,8 @@ def check_params(args=None):
 
     parser.add_argument('-model', metavar='model', default = params.MODEL, 
     help='Model to be run')
-    parser.add_argument('-task', metavar='task', default = params.MODEL, 
-    help='Model to be run')
+    parser.add_argument('-task', metavar='task', default = None, 
+    help='Model to be run', choices='humor,prejudice_woman,prejudice_lgbtiq,prejudice_inmigrant_race,gordofobia,mean_prejudice'.split(','))
     parser.add_argument('-mode', metavar='mode', default = params.MODE, 
     help='Use diferent paradigm learning or evaluate predictions', choices=['evaluate', 'transformer', 'classic'])
 
@@ -151,6 +151,10 @@ if __name__ == '__main__':
 
     if mode == 'transformer':
 
+        if task is None:
+            print('Please specify a task')
+            exit(0)
+
         if phase == 'train':
 
             Path(output).mkdir(parents=True, exist_ok=True)
@@ -174,6 +178,10 @@ if __name__ == '__main__':
             predict(modelB, model.split('/')[-1], task, data_dev=data_dev)
     
     if mode == 'classic':
+
+        if task is None:
+            print('Please specify a task')
+            exit(0)
 
         Path(output).mkdir(parents=True, exist_ok=True)
 
