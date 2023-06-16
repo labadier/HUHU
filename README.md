@@ -1,7 +1,7 @@
 # HUrtful HUmour (HUHU): Detection of humour spreading prejudice in Twitter
-This Repository contain the baselines for evaluation in HUHU shared task at Iberlef 2023
+This Repository contains the baselines for evaluation in HUHU shared task at Iberlef 2023
 
-HUHU shared task focus  on examining the use of humor to express prejudice towards minorities, specifically analyzing Spanish tweets that are prejudicial towards:
+HUHU shared task focuses  on examining the use of humor to express prejudice towards minorities, specifically analyzing Spanish tweets that are prejudicial towards:
 
 - Women and feminists
 - LGBTIQ community
@@ -9,7 +9,7 @@ HUHU shared task focus  on examining the use of humor to express prejudice towar
 - Overweight people
 
 
-Three subtasks are prposed to evaluate this phenomenom
+Three subtasks are proposed to evaluate this phenomenon
 
 #### Subtask 1: HUrtful HUmour Detection
 
@@ -17,7 +17,7 @@ The first subtask consists in determining whether a prejudicial tweet is intende
 
 #### Subtask 2A: Prejudice Target Detection
 
-Taking into account the minority groups analyzed, the aim of this subtask is to identify the targeted groups on each tweet as a multilabel classification task. The metric employed to this was macro-F1.
+Taking into account the minority groups analyzed, the aim of this subtask is to identify the targeted groups on each tweet as a multilabel classification task. The metric employed for this was macro-F1.
 
 #### Subtask 2B: Degree of Prejudice Prediction
 
